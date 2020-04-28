@@ -1,11 +1,68 @@
 'use strict'
 
-const figlet = require('figlet')
+import arg from 'arg'
+import figlet from 'figlet'
+import inquirer from 'inquirer'
 
-export function cli(args) {
+function parseArgumentsIntoOptions(rawArgs) {
+	const args = arg(
+		{
+			'--git': Boolean,
+			'--install': Boolean,
+			'--skip': Boolean,
+			'-g': '--git',
+			'-i': '--install',
+			'-s': '--s'
+		}
+	)
+
+	return {
+		skipPrompts: args['--skip'] || false,
+		git: args['--git'] || false,
+		runInstall: args['--install'] || false
+	}
+}
+
+async function promptForMissingOptions(options) {
+	if (options.skipPrompts) {
+		return { ...options }
+	}
+
+	let questions = []
+	if (!options.git) {
+		questions.push({
+			type: 'confirm',
+			name: 'git',
+			message: 'Initialize a git repository?',
+			default: false
+		})
+	}
+
+	if (!options.runInstall) {
+		questions.push({
+			type: 'confirm',
+			name: 'runInstall',
+			message: 'Install dependencies?',
+			default: false
+		})
+	}
+
+	const answers = await inquirer.prompt(questions)
+	return {
+		...options,
+		git: options.git || answers.git,
+		runInstall: options.runInstall || answers.runInstall
+	}
+}
+
+export async function cli(args) {
 	console.log(figlet.textSync('Hooks CLI', {
   	font: 'Standard',
   	horizontalLayout: 'default',
   	verticalLayout: 'default'
 	}))
+
+	let options = parseArgumentsIntoOptions(args)
+	options = await promptForMissingOptions(options)
+	console.log(options)
 }
