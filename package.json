@@ -4,8 +4,8 @@
   "description": "CLI for scaffolding React hooks",
   "main": "src/index.js",
   "bin": {
-    "@jagonzalr/create-hook": "bin/create-hook",
-    "create-hook": "bin/create-hook"
+    "@jagonzalr/hook-cli": "bin/hook-cli",
+    "hook-cli": "bin/hook-cli"
   },
   "publishConfig": {
     "access": "public"

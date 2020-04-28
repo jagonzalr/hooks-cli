@@ -1,6 +1,7 @@
 'use strict'
 
 import arg from 'arg'
+import chalk from 'chalk'
 import figlet from 'figlet'
 import inquirer from 'inquirer'
 
@@ -55,11 +56,11 @@ async function promptForMissingOptions(options) {
 }
 
 export async function cli(args) {
-	console.log(figlet.textSync('Hooks CLI', {
+	console.log(chalk.green.bold(figlet.textSync('Hooks CLI', {
   	font: 'Standard',
   	horizontalLayout: 'default',
   	verticalLayout: 'default'
-	}))
+	})))
 
 	let options = parseArgumentsIntoOptions(args)
 	options = await promptForMissingOptions(options)
