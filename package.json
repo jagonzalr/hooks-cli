@@ -1,6 +1,6 @@
 {
   "name": "hooks-cli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "CLI for scaffolding React hooks",
   "main": "src/index.js",
   "bin": {
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/jagonzalr/hooks-cli#readme",
   "dependencies": {
-    "esm": "^3.2.25"
+    "esm": "^3.2.25",
+    "figlet": "^1.4.0"
   }
 }
