@@ -11,15 +11,12 @@ function parseArgumentsIntoOptions(rawArgs) {
 		{
 			'--git': Boolean,
 			'--install': Boolean,
-			'--skip': Boolean,
 			'-g': '--git',
-			'-i': '--install',
-			'-s': '--s'
+			'-i': '--install'
 		}
 	)
 
 	return {
-		skipPrompts: args['--skip'] || false,
 		git: args['--git'] || false,
 		runInstall: args['--install'] || false
 	}
@@ -45,7 +42,7 @@ async function promptForMissingOptions(options) {
 			type: 'confirm',
 			name: 'runInstall',
 			message: 'Install dependencies?',
-			default: false
+			default: true
 		})
 	}
 

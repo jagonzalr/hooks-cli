@@ -26,9 +26,6 @@
     "url": "https://github.com/[USERNAME]/[REPO_NAME]/issues"
   },
   "homepage": "https://github.com/[USERNAME]/[REPO_NAME]#readme",
-  "peerDependencies": {
-    "react": "^16.8.x"
-  },
   "babel": {
     "presets": [
       "@babel/preset-env",
@@ -48,5 +45,8 @@
     "hooks": {
       "pre-commit": "lint-staged && pretty-quick --staged"
     }
+  },
+  "peerDependencies": {
+    "react": "^16.8.x"
   }
 }
