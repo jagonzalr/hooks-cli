@@ -1,0 +1,30 @@
+{
+  "name": "hooks-cli",
+  "version": "1.0.0",
+  "description": "CLI for scaffolding React hooks",
+  "main": "src/index.js",
+  "bin": {
+    "@jagonzalr/create-hook": "bin/create-hook",
+    "create-hook": "bin/create-hook"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jagonzalr/hooks-cli.git"
+  },
+  "keywords": [],
+  "author": "Jose Antonio Gonzalez Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jagonzalr/hooks-cli/issues"
+  },
+  "homepage": "https://github.com/jagonzalr/hooks-cli#readme",
+  "dependencies": {
+    "esm": "^3.2.25"
+  }
+}
