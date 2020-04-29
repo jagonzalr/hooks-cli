@@ -1,11 +1,11 @@
 {
   "name": "hooks-cli",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "CLI for scaffolding React hooks",
   "main": "src/index.js",
   "bin": {
-    "@jagonzalr/hook-cli": "bin/hook-cli",
-    "hook-cli": "bin/hook-cli"
+    "@jagonzalr/create-hook": "bin/create-hook",
+    "create-hook": "bin/create-hook"
   },
   "publishConfig": {
     "access": "public"

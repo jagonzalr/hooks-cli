@@ -11,15 +11,12 @@ function parseArgumentsIntoOptions(rawArgs) {
 	const args = arg(
 		{
 			'--git': Boolean,
-			'--install': Boolean,
-			'-g': '--git',
-			'-i': '--install'
+			'-g': '--git'
 		}
 	)
 
 	return {
-		git: args['--git'] || false,
-		runInstall: args['--install'] || false
+		git: args['--git'] || false
 	}
 }
 
@@ -38,20 +35,10 @@ async function promptForMissingOptions(options) {
 		})
 	}
 
-	if (!options.runInstall) {
-		questions.push({
-			type: 'confirm',
-			name: 'runInstall',
-			message: 'Install dependencies?',
-			default: true
-		})
-	}
-
 	const answers = await inquirer.prompt(questions)
 	return {
 		...options,
-		git: options.git || answers.git,
-		runInstall: options.runInstall || answers.runInstall
+		git: options.git || answers.git
 	}
 }
 

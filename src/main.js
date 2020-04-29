@@ -77,9 +77,8 @@ export async function createProject(options) {
  			enabled: () => options.git
  		},
  		{
- 			title: 'Install dependencies',
- 			task: () => installDependencies(),
- 			enabled: () => options.runInstall
+ 			title: 'Installing dependencies',
+ 			task: () => installDependencies()
  		}
  	])
 
