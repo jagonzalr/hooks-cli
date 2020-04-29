@@ -11,8 +11,8 @@ Opinionated CLI for scaffolding React hooks.
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 	- [Create](#create)
-	- [Development](#development)
-	- [Production](#production)
+	- [Develop](#develop)
+	- [Distribute](#distribute)
 - [Structure](#structure)
 - [What is included?](#what-is-included?)
 - [License](#license)
@@ -33,15 +33,15 @@ Opinionated CLI for scaffolding React hooks.
 
 `create-hook -g` or `create-hook --git`
 
-### Development
+### Develop
 
 `npm start`
 
 This will run a demo locally at `localhost:3000` using `webpack.demo.js`
 
-### Production
+### Distribute
 
-`npm run build`
+`npm publish --access public` [Reference](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages)
 
 This will use `webpack.config.js`
 
