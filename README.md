@@ -14,7 +14,7 @@ Opinionated CLI for scaffolding React hooks.
 	- [Develop](#develop)
 	- [Distribute](#distribute)
 - [Structure](#structure)
-- [What is included?](#what-is-included?)
+- [Includes](#includes)
 - [License](#license)
 
 ## Getting started
@@ -26,12 +26,18 @@ Opinionated CLI for scaffolding React hooks.
 ### Create
 
 `mkdir my-custom-hook`
+
 `cd my-custom-hook`
+
 `create-hook`
 
 #### Initialize a git repository
 
-`create-hook -g` or `create-hook --git`
+`create-hook -g`
+
+or
+
+`create-hook --git`
 
 ### Develop
 
@@ -76,7 +82,7 @@ my-custom-hook
     └── index.js
 ```
 
-## What is included?
+## Includes
 
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
