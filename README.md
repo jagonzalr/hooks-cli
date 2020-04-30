@@ -41,6 +41,8 @@ or
 
 ### Develop
 
+Go to your `package.json` and uncomment the `files` property.
+
 `npm start`
 
 This will run a demo locally at `localhost:3000` using `webpack.demo.js`
