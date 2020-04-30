@@ -1,6 +1,6 @@
 {
   "name": "hooks-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for scaffolding React hooks",
   "main": "src/index.js",
   "bin": {
