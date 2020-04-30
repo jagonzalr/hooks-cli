@@ -27,7 +27,12 @@ async function initGit(options) {
 }
 
 async function installDependencies(options) {
-	let result = await execa('./install.sh')
+	let result = await execa('chmod', ['+x', 'install.sh'])
+	if (result.failed) {
+  	return Promise.reject(new Error('Failed to chmod +x install.sh'))
+ 	}
+
+	result = await execa('./install.sh')
 	if (result.failed) {
   	return Promise.reject(new Error('Failed to install dependencies'))
  	}
